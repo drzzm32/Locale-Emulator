@@ -1,12 +1,27 @@
-﻿<Window x:Class="LEGUI.AppConfig"
+﻿<metro:MetroWindow x:Class="LEGUI.AppConfig"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:legui="clr-namespace:LEGUI"
-        Title="LEGUI - " Height="315.811" Width="330.4"
-        WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+        ShowIconOnTitleBar="True"
+        Title="LEGUI - " Height="364" Width="330"
+        WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="icon.ico">
+
+    <metro:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <!-- Accent and AppTheme setting -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Mauve.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </metro:MetroWindow.Resources>
+    
     <Grid TextElement.FontFamily="{DynamicResource UIFont}">
         <Grid x:Name="mainGrid">
             <Grid.RowDefinitions>
-                <RowDefinition Height="60" />
+                <RowDefinition Height="64" />
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid x:Name="appConfigGrid" Grid.Row="0" Background="#FFF1F1F1">
@@ -85,4 +100,4 @@
             </Grid>
         </Grid>
     </Grid>
-</Window>
+</metro:MetroWindow>

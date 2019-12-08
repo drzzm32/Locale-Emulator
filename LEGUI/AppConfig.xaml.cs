@@ -8,13 +8,14 @@ using System.Reflection;
 using System.Runtime.InteropServices.ComTypes;
 using System.Windows;
 using LECommonLibrary;
+using MahApps.Metro.Controls;
 
 namespace LEGUI
 {
     /// <summary>
     ///     Interaction logic for AppConfig.xaml
     /// </summary>
-    public partial class AppConfig
+    public partial class AppConfig : MetroWindow
     {
         private readonly List<CultureInfo> _cultureInfos = new List<CultureInfo>();
         private readonly List<TimeZoneInfo> _timezones = new List<TimeZoneInfo>();

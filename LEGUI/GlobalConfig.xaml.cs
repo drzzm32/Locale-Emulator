@@ -6,13 +6,14 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Effects;
 using LECommonLibrary;
+using MahApps.Metro.Controls;
 
 namespace LEGUI
 {
     /// <summary>
     ///     Interaction logic for GlobalConfig.xaml
     /// </summary>
-    public partial class GlobalConfig
+    public partial class GlobalConfig : MetroWindow
     {
         private readonly List<CultureInfo> _cultureInfos = new List<CultureInfo>();
         private readonly List<LEProfile> _profiles = new List<LEProfile>();
